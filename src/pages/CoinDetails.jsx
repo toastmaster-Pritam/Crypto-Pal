@@ -100,6 +100,7 @@ const CoinDetails = () => {
         // console.log(chartData)
 
         setCoin(data);
+        console.log(data);
         setChartArray(chartData.prices);
         setLoading(false);
       } catch (error) {
@@ -196,7 +197,7 @@ const CoinDetails = () => {
               <Box w={"full"} p={"4"}>
                 <Item
                   title={"Max Supply"}
-                  value={coin.market_data.max_supply}
+                  value={coin.market_data.max_supply?coin.market_data.max_supply: "Data Not Available"}
                 />
                 <Item
                   title={"Circulating Supply"}
